@@ -17,4 +17,14 @@ public class Cliente {
         return nombre;
     }
 
+    public int aplicarDescuento(int total) {
+        switch (tipo) {
+            case "Premium":
+                return (int) (total * 0.9);
+            case "VIP":
+                return (int) (total * 0.8);
+            default:
+                return total;
+        }
+    }
 }
